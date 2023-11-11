@@ -1,18 +1,20 @@
 package koschei.models;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Egg6 {
 
-    private final Deth8 deth;
+    private Needle7 needle;
 
-    public Egg6(Deth8 deth) {
-        this.deth = deth;
+    @Autowired
+    public void setNeedle (Needle7 needle) {
+        this.needle = needle;
     }
 
     @Override
     public String toString() {
-        return ", в яйце иголка " + deth.toString();
+        return ", в яйце иголка " + needle.toString();
     }
 }
